@@ -1,0 +1,117 @@
+:root {
+    --lightgray: hsl(0, 0%, 95%); /*bg headings buttons*/
+    --transwhitePara: hsla(0, 0%, 100%, 0.75); /*para*/
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightgray);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+h2{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 200%;
+    color: var(--lightgray);
+    padding: 1.5rem 0rem;
+}
+
+p{
+    color: var(--transwhitePara);
+}
+
+a{
+    text-decoration: none;
+}
+
+.card{
+    max-width: 57.563rem;
+    height: 31.25rem;
+    margin: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: 10px 10px 15px rgb(156, 156, 156);
+}
+
+.cardContent{
+    padding: 3rem;
+}
+
+.col1{
+    background-color: var(--brightOrange);
+}
+
+.col2{
+    background-color: var(--darkCyan);
+}
+
+.col3{
+    background-color: var(--veryDarkCyan);
+}
+
+img{
+    max-height: 100%;
+    max-width: 100%; 
+}
+
+button{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    margin-top: 2.5rem;
+    border-radius: 2rem;
+    border: 2px solid var(--lightgray);
+    cursor: pointer;
+}
+
+button:hover{ border: 2px solid white; }
+
+.lxr-btn{ color: var(--veryDarkCyan); }
+
+.lxr-btn:hover{
+    background-color: var(--veryDarkCyan);
+    color: var(--lightgray);
+}
+
+.suv-btn{ color: var(--darkCyan); }
+
+.suv-btn:hover{
+    background-color: var(--darkCyan);
+    color: var(--lightgray);
+}
+
+.sdn-btn{ color: var(--brightOrange); }
+
+.sdn-btn:hover{
+    background-color: var(--brightOrange);
+    color: var(--lightgray);
+}
+
+
+@media(max-width: 600px){
+    .card{
+        width: 80%;
+        height: 70%;
+        display: grid;
+        margin: 5rem auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
